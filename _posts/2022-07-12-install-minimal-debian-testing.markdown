@@ -1,8 +1,9 @@
 ---
+title: Install minimal Debian Testing
+date: 2022-07-12 09:16:47 Z
+categories:
+- debian
 layout: post
-title:  "Install minimal Debian Testing"
-date:   2022-07-12 12:16:47 +0300
-categories: debian
 ---
 
 /etc/apt/sources.list - 1 line - add contrib non-free and change to mirror.yandex.ru
