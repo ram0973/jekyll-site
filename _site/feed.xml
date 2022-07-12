@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-07-12T12:42:34+00:00</updated><id>/feed.xml</id><title type="html">Linux Java and others</title><subtitle>Linux Java and others</subtitle><entry><title type="html">Install minimal Debian Testing</title><link href="/debian/2022/07/12/install-minimal-debian-testing.html" rel="alternate" type="text/html" title="Install minimal Debian Testing" /><published>2022-07-12T09:16:47+00:00</published><updated>2022-07-12T09:16:47+00:00</updated><id>/debian/2022/07/12/install-minimal-debian-testing</id><content type="html" xml:base="/debian/2022/07/12/install-minimal-debian-testing.html"><![CDATA[<p>/etc/apt/sources.list - 1 line - add contrib non-free and change to mirror.yandex.ru</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-mark hold gnome-games libreoffice-core firefox-esr
+<span class="nb">sudo </span>apt <span class="nb">install </span>gnome-core</code></pre></figure>
+
+<p>/etc/network/interfaces # тут закомментировать всё</p>
+
+<p>/etc/NetworkManager/NetworkManager.conf содержит:</p>
+
+<p>[main]</p>
+
+<p>plugins=ifupdown,keyfile</p>
+
+<p>[ifupdown]</p>
+
+<p>managed=true</p>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td>wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub</td>
+      <td>sudo apt-key add -</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>sudo sh -c ‘echo “deb http://dl.google.com/linux/chrome/deb/ stable main” » /etc/apt/sources.list.d/google.list’</p>
+
+<p>sudo apt update &amp;&amp; sudo apt install google-chrome-stable</p>
+
+<hr />
+
+<p>sudo apt install gnome-tweaks</p>
+
+<p>Extensions - User themes - on, Removable Drive Menu - on</p>
+
+<p>Go to Gnome Extensions website - install plugin “Gnome Shell integration”</p>
+
+<p>Reload page</p>
+
+<p>Install:</p>
+
+<p>Dash to Panel</p>
+
+<p>Bring Out Submenu Of Power Off/Logout button</p>
+
+<p>Dash to Panel settings - Width 42px - Opacity 50</p>
+
+<p>Override panel theme color to desirable (dark red)</p>
+
+<hr />
+
+<p>Terminal - Enable the menu accelerator key -disable</p>
+
+<p>colors - tango dark/tango</p>
+
+<p>size - 132 x 32</p>
+
+<hr />
+
+<p>Download &amp;&amp; Install Jetbrains mono fonts</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt <span class="nb">install </span>fonts-jetbrains-mono</code></pre></figure>
+
+<p>Interface - set Nimbus</p>
+
+<hr />
+
+<p>Install Jetbrains Toolbox App</p>
+
+<p>Download and:</p>
+
+<p>sudo tar -xzf jetbrains-toolbox-* -C /opt</p>
+
+<p>Install Jetbrains Idea community</p>
+
+<p>sudo apt install ttf-mscorefonts-installer</p>
+
+<p>sudo apt install papirus-icon-theme</p>
+
+<p>Change fonts to PT Sans regular &amp; Jetbrains Mono</p>
+
+<p>Change icons to papirus</p>
+
+<p>Change wallpaper (Second is good)</p>
+
+<p>TITLE BARS - MAX, MIN</p>
+
+<p>Ant theme - ggsettings set org.gnome.desktop.wp.preferences theme Ant</p>
+
+<p>Ant theme - ggsettings set org.gnome.desktop.interface gtk-theme Ant</p>
+
+<hr />
+
+<p>Anydesk</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY</td>
+      <td>gpg –dearmor</td>
+      <td>sudo tee /etc/apt/trusted.gpg.d/anydesk.com.gpg</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>echo “deb http://deb.anydesk.com/ all main”</td>
+      <td>sudo tee /etc/apt/sources.list.d/anydesk-stable.list</td>
+    </tr>
+  </tbody>
+</table>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">def print_hi<span class="o">(</span>name<span class="o">)</span>
+  puts <span class="s2">"Hi, #{name}"</span>
+end
+print_hi<span class="o">(</span><span class="s1">'Tom'</span><span class="o">)</span>
+<span class="c">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="debian" /><summary type="html"><![CDATA[/etc/apt/sources.list - 1 line - add contrib non-free and change to mirror.yandex.ru]]></summary></entry></feed>
