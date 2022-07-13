@@ -12,7 +12,6 @@ email: ram0973@gmail.com
 description: Linux Java and others
 baseurl: ''
 url: ''
-twitter_username: ram0973
 github_username: ram0973
 theme: minima
 plugins:
